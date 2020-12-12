@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.viewmodel.R
 import com.example.viewmodel.common.MyApp
@@ -18,6 +20,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.fragment_maps.*
+import java.util.EnumSet.of
 
 class MapsFragment : Fragment(),OnMapReadyCallback {
 
@@ -26,6 +29,10 @@ class MapsFragment : Fragment(),OnMapReadyCallback {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        activity.let {
+            mapsViewModel = ViewModelProviders.of(it!!).get(MapsViewModel::class.java)
+        }
+
         map_view.onCreate(savedInstanceState)
         map_view.onResume()
         map_view.getMapAsync(this)

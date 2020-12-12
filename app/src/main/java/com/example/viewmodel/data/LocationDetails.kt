@@ -1,4 +1,4 @@
 package com.example.viewmodel.data
 
-class LocationDetails {
+data class LocationDetails (val longitude: String, val latitude:String) {
 }
