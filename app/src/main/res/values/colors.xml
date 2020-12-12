@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5F6A6A</color>
+    <color name="colorPrimaryDark">#1C2833</color>
+
+    <color name="colorAccent">#283747 </color>
+    <color name="Orange">#E59866</color>
+    <color name="colorfont1"> #FDF2E9 </color>
+    <color name="colorfont2"> #F6DDCC </color>
+    <color name="buttonColorSalmon"> #F5B7B1 </color>
+    <color name="Gray">#566573</color>
+    <color name="White">#ECF0F1</color>
+    <color name="Black1">#1C2833</color>
+
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="Gray2">#5F6A6A </color>
+    <color name="Gray3">#B2BABB</color>
+
+    <color name="Gray4">#5D6D7E</color>
+    <color name="Gray5">#ABB2B9</color>
+    <color name="Gray6">#626567</color>
+    <color name="Gray7">#EAECEE</color>
+    <color name="colorWhite">#FFFF</color>
+</resources>

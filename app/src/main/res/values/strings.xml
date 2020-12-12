@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ViewModel</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_movies">Peliculas</string>
+    <string name="title_Map">Mapa</string>
+</resources>
