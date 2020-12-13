@@ -5,4 +5,20 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_movies">Peliculas</string>
     <string name="title_Map">Mapa</string>
+    <string name="edt_pass">Contraseña</string>
+    <string name="edt_user">Email</string>
+    <string name="Button_Login">Entrar</string>
+    <string name="Registrer">Registrarse</string>
+    <string name="NameRegistrer">Nombre </string>
+    <string name="SecondName">Apellidos</string>
+    <string name="SendMail">Correo Electronico</string>
+    <string name="SexndPass">Contraseña</string>
+    <string name="Button_Registrer">Enviar</string>
+    <string name="app_send">Enviar</string>
+    <string name="add_image">Ingresa Imagen</string>
+    <string name="app_image">add</string>
+    <string name="app_nameUser">Ingresa tu Nombre</string>
+    <string name="app_secondName">Ingresa tu Apellido</string>
+    <string name="app_emailUser">Ingresa tu Email</string>
+    <string name="add_passUser">Ingresa tu Contraseña</string>
 </resources>

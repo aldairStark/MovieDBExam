@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#5F6A6A</color>
+    <color name="colorPrimary">#8272C8</color>
     <color name="colorPrimaryDark">#1C2833</color>
 
     <color name="colorAccent">#283747 </color>
@@ -21,4 +21,11 @@
     <color name="Gray6">#626567</color>
     <color name="Gray7">#EAECEE</color>
     <color name="colorWhite">#FFFF</color>
+    <color name="porplue">#967EA3</color>
+    <color name="butonPurple">#220035</color>
+    <color name="purpleBackground1">#482586</color>
+    <color name="purpleBackground3"> #A16DFC</color>
+    <color name="purpleBackground2">#00ffffff</color>
+    <color name="purpleBackground4">#C5B5E1</color>
+
 </resources>
