@@ -24,8 +24,10 @@
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:hint="@string/app_nameUser"
             android:drawableLeft="@drawable/ic_login"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -34,8 +36,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserLastname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:typeface="sans"
+            android:inputType="text"
             android:drawableLeft="@drawable/ic_login"
             android:hint="@string/app_secondName"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -43,8 +48,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserEMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailSubject"
             android:textColorHighlight="@color/White"
             android:hint="@string/app_emailUser"
             android:drawableLeft="@drawable/ic_email"/>
@@ -52,16 +59,22 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:drawableLeft="@drawable/ic_key"
+        >
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/add_passUser"
-            android:drawableLeft="@drawable/ic_key"/>
+            android:inputType="textPassword"
+           />
     </com.google.android.material.textfield.TextInputLayout>
 //add image
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -69,7 +82,7 @@
         android:background="@drawable/style_border_load">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/materialTextView2"
+            android:id="@+id/tvwImage"
             android:layout_width="170dp"
             android:layout_height="43dp"
             android:drawableLeft="@drawable/ic_imagen"
@@ -82,7 +95,7 @@
             />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSendUser"
+            android:id="@+id/btnSendImg"
             android:layout_width="112dp"
             android:layout_height="46dp"
             android:hint="@string/app_image"
@@ -123,13 +136,21 @@
         android:layout_height="wrap_content"
         android:padding="50dp">
 <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnSendUser"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textColorHint="@color/White"
     android:hint="@string/app_send"/>
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
-
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/labelLongitude"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/labelLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <ProgressBar
         android:layout_marginTop="60dp"
         android:id="@+id/progressBar"

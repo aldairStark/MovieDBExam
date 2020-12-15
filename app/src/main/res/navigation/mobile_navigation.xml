@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_movies"
-        android:name="com.example.viewmodel.ui.movies.MovieListFragment"
+        android:name="com.example.viewModel.ui.movies.MovieListFragment"
         android:label="@string/title_movies"
         tools:layout="@layout/fragment_movie_list_list" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.viewmodel.ui.dashboard.DashboardFragment"
+        android:name="com.example.viewModel.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
