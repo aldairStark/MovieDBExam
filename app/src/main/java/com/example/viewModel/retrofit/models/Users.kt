@@ -1,11 +1,12 @@
 package com.example.viewModel.retrofit.models
 
-data class User(
-    val id:String="",
-    val name:String="",
-    val mail:String ="",
-    val lastname:String="",
-    val password:String="",
-    val latitude:String="",
-    val longitude:String="") {
+class User(
+    var id:String="",
+    var name:String="",
+    var mail:String ="",
+    var lastname:String="",
+    var password:String="",
+    var latitude:String="",
+    var longitude:String="",
+    var imagen:String="" ) {
 }

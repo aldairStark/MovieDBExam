@@ -1,16 +1,23 @@
 package com.example.viewModel.ui.registrer
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.get
 import com.example.viewModel.R
 import com.example.viewModel.retrofit.models.User
+import com.example.viewModel.ui.login.login
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_registrer.*
 
 class registrer : AppCompatActivity() {
 
@@ -24,6 +31,7 @@ class registrer : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private lateinit var labelLatitude:TextView
     private lateinit var labelLongitude:TextView
+    private lateinit var viewModel:registrerViewModel
     //variables location
     private val LOCATION_PERMISSION_REQUEST_CODE=2000
     private lateinit var locationViewModel: LocationViewModel
@@ -36,6 +44,9 @@ class registrer : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrer)
+
+
+
 
         txtUserName = findViewById(R.id.edtUserName)
         txtLastName = findViewById(R.id.edtUserLastname)
@@ -52,7 +63,14 @@ class registrer : AppCompatActivity() {
 
 
         prepRequestLocationUpdates()
-        saveUser()
+        btnSedUser.setOnClickListener {
+            if (completedForm()){
+                progressBar.visibility= View.VISIBLE
+                saveUser()
+            }
+
+        }
+
         Toast.makeText(this,"$lat + $log",Toast.LENGTH_LONG).show()
 
         println("****************************************************************")
@@ -83,12 +101,33 @@ class registrer : AppCompatActivity() {
             labelLatitude.text=it.latitude.toString()
             labelLongitude.text=it.Longitude.toString()
             Toast.makeText(this,"$lat + $log",Toast.LENGTH_LONG).show()
+
         })
     }
+    private fun ActionRegistrer(){
+        startActivity(Intent(this,login::class.java))
+    }
     private fun saveUser() {
-        var user=User().apply {
-
+        var user = User().apply {
+            latitude=labelLatitude.text.toString()
+            longitude=labelLongitude.text.toString()
+            name =  txtUserName.text.toString()
+            lastname= txtLastName.text.toString()
+            mail= txtEmail.text.toString()
+            password= txtPass.text.toString()
+           // edtextImage = findViewById(R.id.tvwImage)
+            ActionRegistrer()
         }
+        viewModel=ViewModelProvider(this).get(registrerViewModel::class.java)
+        viewModel.save(user)
+    }
+    fun completedForm():Boolean{
+        if (txtUserName.text.isNullOrBlank()) txtUserName.error = getString(R.string.fieldEmpty)
+        if (txtLastName.text.isNullOrBlank()) txtLastName.error = getString(R.string.fieldEmpty)
+        if (txtEmail.text.isNullOrBlank()) txtEmail.error = getString(R.string.fieldEmpty)
+        if (txtPass.text.isNullOrBlank()) txtPass.error = getString(R.string.fieldEmpty)
+        return !(txtUserName.text.isNullOrBlank() || txtLastName.text.isNullOrBlank() ||
+                txtEmail.text.isNullOrBlank() || txtPass.text.isNullOrBlank())
     }
     override fun onRequestPermissionsResult(
         requestCode: Int,

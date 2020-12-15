@@ -21,4 +21,6 @@
     <string name="app_secondName">Ingresa tu Apellido</string>
     <string name="app_emailUser">Ingresa tu Email</string>
     <string name="add_passUser">Ingresa tu Contraseña</string>
+    <string name="fieldEmpty">Campo Obligatorio</string>
+    <string name="log_outButon">Cerrar Sesion</string>
 </resources>
