@@ -1,4 +1,4 @@
-package com.example.viewmodel.retrofit.models
+package com.example.viewModel.retrofit.models
 
 data class Movie(
     val adult: Boolean,

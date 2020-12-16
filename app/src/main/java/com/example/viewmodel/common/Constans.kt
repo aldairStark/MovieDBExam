@@ -1,4 +1,4 @@
-package com.example.viewmodel.common
+package com.example.viewModel.common
 
 class Constans {
     companion object{

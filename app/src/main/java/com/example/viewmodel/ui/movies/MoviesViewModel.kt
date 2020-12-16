@@ -1,9 +1,9 @@
-package com.example.viewmodel.ui.movies
+package com.example.viewModel.ui.movies
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.example.viewmodel.repository.TheMovieDBRepository
-import com.example.viewmodel.retrofit.models.Movie
+import com.example.viewModel.repository.TheMovieDBRepository
+import com.example.viewModel.retrofit.models.Movie
 
 class MoviesViewModel: ViewModel() {
 

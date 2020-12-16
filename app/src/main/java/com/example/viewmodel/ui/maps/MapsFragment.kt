@@ -1,16 +1,14 @@
-package com.example.viewmodel.ui.maps
+package com.example.viewModel.ui.maps
 
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.viewmodel.R
-import com.example.viewmodel.common.MyApp
+import com.example.viewModel.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback

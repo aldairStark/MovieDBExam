@@ -1,7 +1,7 @@
-package com.example.viewmodel.retrofit
+package com.example.viewModel.retrofit
 
 
-import com.example.viewmodel.retrofit.models.PopularMoviesDataResponse
+import com.example.viewModel.retrofit.models.PopularMoviesDataResponse
 import retrofit2.Call
 import retrofit2.http.GET
 

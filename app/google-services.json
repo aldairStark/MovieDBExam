@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "494591809771",
+    "project_id": "mapsmovies",
+    "storage_bucket": "mapsmovies.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494591809771:android:5ca204b18fc9de100346ae",
+        "android_client_info": {
+          "package_name": "com.example.viewmodel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494591809771-lq01soa14r3ssaqsmp43613vrt0djs7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSAgKXrFMxeGcZwsSX5ZgpGrnbxMDhCVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494591809771-lq01soa14r3ssaqsmp43613vrt0djs7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

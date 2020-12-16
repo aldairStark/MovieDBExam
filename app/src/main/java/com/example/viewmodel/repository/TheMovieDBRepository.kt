@@ -1,12 +1,12 @@
-package com.example.viewmodel.repository
+package com.example.viewModel.repository
 
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import com.example.viewmodel.common.MyApp
-import com.example.viewmodel.retrofit.TheMovieDBClient
-import com.example.viewmodel.retrofit.TheMovieServices
-import com.example.viewmodel.retrofit.models.Movie
-import com.example.viewmodel.retrofit.models.PopularMoviesDataResponse
+import com.example.viewModel.common.MyApp
+import com.example.viewModel.retrofit.TheMovieDBClient
+import com.example.viewModel.retrofit.TheMovieServices
+import com.example.viewModel.retrofit.models.Movie
+import com.example.viewModel.retrofit.models.PopularMoviesDataResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

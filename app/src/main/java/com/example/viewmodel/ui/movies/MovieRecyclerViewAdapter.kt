@@ -1,4 +1,4 @@
-package com.example.viewmodel.ui.movies
+package com.example.viewModel.ui.movies
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.example.viewmodel.R
-import com.example.viewmodel.common.Constans
-import com.example.viewmodel.retrofit.models.Movie
+import com.example.viewModel.R
+import com.example.viewModel.common.Constans
+import com.example.viewModel.retrofit.models.Movie
 import kotlinx.android.synthetic.main.fragment_movie_list.view.*
 
 

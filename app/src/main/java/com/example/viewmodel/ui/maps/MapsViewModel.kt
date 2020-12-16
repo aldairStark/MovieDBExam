@@ -1,4 +1,4 @@
-package com.example.viewmodel.ui.maps
+package com.example.viewModel.ui.maps
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

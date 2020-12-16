@@ -1,4 +1,4 @@
-package com.example.viewmodel.ui.movies
+package com.example.viewModel.ui.movies
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,9 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.viewmodel.R
-import com.example.viewmodel.retrofit.models.Movie
-import kotlinx.android.synthetic.main.fragment_movie_list_list.*
+import com.example.viewModel.R
+import com.example.viewModel.retrofit.models.Movie
 
 
 class MovieListFragment : Fragment() {

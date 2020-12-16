@@ -1,6 +1,6 @@
-package com.example.viewmodel.retrofit
+package com.example.viewModel.retrofit
 
-import com.example.viewmodel.common.Constans
+import com.example.viewModel.common.Constans
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

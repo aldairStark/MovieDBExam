@@ -1,6 +1,4 @@
-package com.example.viewmodel.retrofit.models
-
-import com.example.viewmodel.retrofit.models.Movie
+package com.example.viewModel.retrofit.models
 
 data class PopularMoviesDataResponse(
     val page: Int,

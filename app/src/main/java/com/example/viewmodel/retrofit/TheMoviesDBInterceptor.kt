@@ -1,6 +1,6 @@
-package com.example.viewmodel.retrofit
+package com.example.viewModel.retrofit
 
-import com.example.viewmodel.common.Constans
+import com.example.viewModel.common.Constans
 import okhttp3.Interceptor
 import okhttp3.Response
 
