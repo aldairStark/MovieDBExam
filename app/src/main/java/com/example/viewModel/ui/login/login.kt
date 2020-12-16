@@ -33,10 +33,11 @@ class login : AppCompatActivity() {
 
         btnSend = findViewById(R.id.Btn_Login)
         btnRegister=findViewById(R.id.btnRegistrer)
+        progresBar=findViewById(R.id.progressBarLogin)
         auth= FirebaseAuth.getInstance()
         btnSend.setOnClickListener{
-           ActionSend()
-            // Loging()
+           //ActionSend()
+            Loging()
         }
         btnRegister.setOnClickListener {
             ActionRegister()
@@ -77,6 +78,14 @@ class login : AppCompatActivity() {
     }
     private fun ActionRegister(){
         startActivity(Intent(this,registrer::class.java))
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser !=null){
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
     }
 
 }

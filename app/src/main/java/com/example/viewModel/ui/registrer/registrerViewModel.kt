@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.example.viewModel.common.MyApp
 import com.example.viewModel.retrofit.models.User
 import com.example.viewModel.ui.login.login
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.firebase.ktx.Firebase
@@ -14,16 +15,26 @@ import com.google.firebase.ktx.Firebase
 class registrerViewModel:ViewModel() {
 
     private lateinit  var firestore:FirebaseFirestore
+    private lateinit var mAut :FirebaseAuth
 
 init {
 
     firestore= FirebaseFirestore.getInstance()
-    firestore.firestoreSettings =FirebaseFirestoreSettings.Builder().build()
+    val settings = FirebaseFirestoreSettings.Builder()
+        .setPersistenceEnabled(true)
+        .build()
+    firestore.firestoreSettings = settings
+
+
+    //firestore.firestoreSettings =FirebaseFirestoreSettings.Builder()
+      //  .setPersistenceEnabled(true)
+        //.build()
 }
 
     fun save(user:User){
+
        val document= firestore.collection("users").document()
-        user.id=document.id
+
         val set=document.set(user)
             set.addOnSuccessListener {r->
 
