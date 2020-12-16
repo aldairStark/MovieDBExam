@@ -5,8 +5,8 @@ import android.util.Log
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModel
 import com.example.viewModel.common.MyApp
-import com.example.viewModel.retrofit.models.User
 import com.example.viewModel.ui.login.login
+import com.example.viewmodel.retrofit.models.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
@@ -31,7 +31,7 @@ init {
         //.build()
 }
 
-    fun save(user:User){
+    fun save(user: Users){
 
        val document= firestore.collection("users").document()
 

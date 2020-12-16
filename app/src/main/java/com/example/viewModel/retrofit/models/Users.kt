@@ -1,12 +1,11 @@
-package com.example.viewModel.retrofit.models
+package com.example.viewmodel.retrofit.models
 
-class User(
-    var id:String="",
-    var name:String="",
-    var mail:String ="",
-    var lastname:String="",
-    var password:String="",
-    var latitude:String="",
-    var longitude:String="",
-    var imagen:String="" ) {
+data class Users( var id:String="",
+                  var name:String="",
+                  var mail:String ="",
+                  var lastname:String="",
+                  var password:String="",
+                  var latitude:String="",
+                  var longitude:String="",
+                  var imagen:String="") {
 }

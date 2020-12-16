@@ -14,8 +14,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.get
 import com.example.viewModel.R
-import com.example.viewModel.retrofit.models.User
 import com.example.viewModel.ui.login.login
+import com.example.viewmodel.retrofit.models.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
@@ -88,7 +88,7 @@ class registrer : AppCompatActivity() {
             fileUpload()
         }
 
-        Toast.makeText(this,"$lat + $log",Toast.LENGTH_LONG).show()
+        //Toast.makeText(this,"$lat + $log",Toast.LENGTH_LONG).show()
 
         println("****************************************************************")
         println(lat)
@@ -130,7 +130,7 @@ class registrer : AppCompatActivity() {
             if (task.isComplete){
                 val userAuth:FirebaseUser?=mAuth.currentUser
                 var idUser=userAuth?.uid
-                var user = User().apply {
+                var user = Users().apply {
                     id=idUser.toString()
                     latitude=labelLatitude.text.toString()
                     longitude=labelLongitude.text.toString()
